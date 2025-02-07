@@ -9,3 +9,5 @@ output/
 
 # Ignore virtual environment folder
 myvenv/
+
+howtorun.txt
