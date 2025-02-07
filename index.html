@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Classifier</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body class="min-h-screen p-8">
+    <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-8">
+            <h1 class="text-4xl font-bold mb-4">Emotion Classifier</h1>
+            <p class="text-lg text-gray-400">Type a sentence to analyze its emotion:</p>
+        </div>
+
+        <div class="relative mb-4">
+            <textarea id="inputText" class="input-field" placeholder="Enter your text here..."></textarea>
+            <div id="rephrasedText" class="rephrased-text hidden"></div>
+            <div class="mt-4">
+                <input type="file" id="fileInput" class="hidden" accept=".pdf">
+                <button class="button" onclick="document.getElementById('fileInput').click()">
+                    Upload PDF File
+                </button>
+                <div class="dropdown inline-block">
+                    <button class="button" onclick="toggleDropdown()">Rephrase</button>
+                    <div id="emotionDropdown" class="dropdown-content">
+                        <a href="#" data-emotion="anger">Anger</a>
+                        <a href="#" data-emotion="disgust">Disgust</a>
+                        <a href="#" data-emotion="fear">Fear</a>
+                        <a href="#" data-emotion="joy">Joy</a>
+                        <a href="#" data-emotion="neutral">Neutral</a>
+                        <a href="#" data-emotion="sadness">Sadness</a>
+                        <a href="#" data-emotion="surprise">Surprise</a>
+                    </div>
+                </div>
+            </div>
+            <div id="loading" class="loading">
+                <p class="text-lg">Processing your file... Please wait.</p>
+            </div>
+        </div>
+
+        <div id="result-container" class="flex gap-6">
+            <div class="card p-6 w-1/2">
+                <h2 class="text-xl font-semibold mb-4">Emotion Breakdown</h2>
+                <div id="result"></div>
+            </div>
+
+            <div class="card p-6 w-1/2">
+                <h2 class="text-xl font-semibold mb-4">Emotion Distribution</h2>
+                <canvas id="emotionChart"></canvas>
+            </div>
+        </div>
+        <br>
+        <div id="text-container" class="card p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">Analyzed Text</h2>
+            <div id="analyzed-text"></div>
+        </div>
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+fastapi==0.115.6
+Flask==3.1.0
+Flask_Cors==5.0.0
+protobuf==5.29.3
+transformers==4.48.0
+unstructured_ingest==0.3.12
+torch
+google.generativeai
+python-dotenv
+# https://drive.google.com/drive/folders/10uj0ITZ6jXB_cOhLY_bmvJnLqSkKrlkl?usp=sharing
