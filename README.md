@@ -26,8 +26,8 @@ Ensure you have the following installed:
 
 ### Clone the Repository
 ```bash
-git clone https://github.com/your-username/emotion-recognition-webapp.git
-cd emotion-recognition-webapp
+git clone https://github.com/RONAKBAGRI/Emotion-Recognition-WebApp.git
+cd Emotion-Recognition-WebApp
 ```
 
 ### Install Dependencies
