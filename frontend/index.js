@@ -46,7 +46,7 @@ document.getElementById('fileInput').addEventListener('change', async function(e
         const formData = new FormData();
         formData.append('file', file);
 
-        const response = await fetch('http://127.0.0.1:5000/upload', {
+        const response = await fetch('http://localhost:8080/upload', {
             method: 'POST',
             body: formData
         });
@@ -98,7 +98,7 @@ document.querySelectorAll('#emotionDropdown a').forEach(item => {
             return;
         }
 
-        fetch('http://127.0.0.1:5000/rephrase', {
+        fetch('http://localhost:8080/rephrase', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ text, emotion })
@@ -166,7 +166,7 @@ function analyzeEmotion(rephrasedText = null) {
         return;
     }
 
-    fetch('http://127.0.0.1:5000/predict_emotion', {
+    fetch('http://localhost:8080/predict_emotion', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ text })

@@ -1,0 +1,7 @@
+1. Activate the virtual environment:
+   ./activate
+
+2. Run the app.py file:
+   python app.py
+
+3. Open the HTML file separately from the file explorer.

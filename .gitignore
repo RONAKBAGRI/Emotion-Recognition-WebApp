@@ -1,13 +1,9 @@
 # Ignore environment folder
 .env
 
-# Ignore node modules
-node_modules/
 
 # Ignore output folder
-output/
+/backend/output/
 
 # Ignore virtual environment folder
 myvenv/
-
-howtorun.txt
